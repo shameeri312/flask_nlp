@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
-from textblob import TextBlob
 import google.generativeai as genai
+from textblob import TextBlob
 
 app = Flask(__name__)
 
@@ -108,5 +108,5 @@ def analyze_chat():
 
 
 if __name__ == "__main__":
-    ip_address = "192.168.100.35"  # Replace with your machine's IP
+    ip_address = "0.0.0.0"  # Replace with your machine's IP
     app.run(host=ip_address, port=5000, debug=True)
